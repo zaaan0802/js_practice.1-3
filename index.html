@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript 課題①-3</title>
+</head>
+
+<body>
+  <script>
+    var tasks = ['掃除', '買い物', '散歩'];
+
+    function printTaskHeader() {
+      top.console.log('=======================');
+      top.console.log('現在持っているタスクの一覧');
+      top.console.log('=======================');
+    };
+
+    printTaskHeader();
+    tasks.forEach(function (toDos) {
+      var number = tasks.indexOf(toDos);
+      console.log(number + 1 + ' : ' + toDos);
+      // 0スタートが気持ち悪いので1スタートにした
+    });
+
+    var addTask = window.prompt('タスクを入力してください')
+    alert('新しいタスクを追加しました。');
+    tasks.push(addTask);
+
+    printTaskHeader();
+
+    tasks.forEach(function (toDos) {
+      var number = tasks.indexOf(toDos);
+      console.log(number + 1 + ' : ' + toDos);
+    });
+
+    prompt('「確認,追加,削除,終了」の4つのいずれかを入力してください。');
+
+  </script>
+</body>
+
+</html>
